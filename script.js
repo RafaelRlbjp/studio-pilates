@@ -5,7 +5,7 @@
 // WhatsApp do Studio
 // 55 = Brasil
 // 83 = DDD
-const numeroWhatsApp = "558399999999";
+const numeroWhatsApp = "5583999999999";
 
 
 // Para aulas no mesmo dia:
