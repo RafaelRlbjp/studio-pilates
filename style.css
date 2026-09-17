@@ -1,0 +1,984 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+:root {
+    --verde-principal: #4d8b7a;
+    --verde-escuro: #315f53;
+    --verde-hover: #3a6e60;
+
+    --fundo: #f7faf9;
+    --fundo-verde: #eaf5f1;
+
+    --branco: #ffffff;
+
+    --texto: #333333;
+    --cinza: #666666;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--fundo);
+
+    color: var(--texto);
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: var(--fundo-verde);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 7%;
+
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.marca {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--verde-principal);
+
+    text-decoration: none;
+}
+
+
+.marca-simbolo {
+    display: grid;
+
+    place-items: center;
+
+    width: 72px;
+
+    height: 44px;
+
+    padding: 7px;
+
+    overflow: hidden;
+
+    background-color: var(--verde-principal);
+
+    border-radius: 10px;
+}
+
+
+.marca-logo {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.marca-nome {
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: var(--verde-principal);
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--verde-escuro);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+.inicio {
+    padding: 40px 20px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: var(--fundo);
+}
+
+
+.banner-inicio {
+    width: min(92vw, 1280px);
+}
+
+
+.banner-inicio picture {
+    display: block;
+}
+
+
+.imagem-inicio {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+
+.botao-agendar {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    background-color: var(--verde-principal);
+
+    color: white;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.botao-agendar:hover {
+    background-color: var(--verde-hover);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    padding: 70px 10%;
+
+    text-align: center;
+}
+
+
+.secao h2 {
+    color: var(--verde-escuro);
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+.secao > p {
+    max-width: 700px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.subtitulo {
+    color: var(--cinza);
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    background-color: var(--branco);
+}
+
+
+/* =========================
+   SERVIÇOS
+========================= */
+
+.servicos {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+
+.servico {
+    width: 300px;
+
+    background-color: var(--branco);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+
+.servico:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+.servico h3 {
+    color: var(--verde-principal);
+
+    margin-bottom: 15px;
+}
+
+
+.servico p {
+    color: #555555;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria {
+    background-color: var(--branco);
+
+    text-align: center;
+}
+
+
+.galeria-fotos {
+    width: min(1100px, 100%);
+
+    margin: 35px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.foto-studio {
+    margin: 0;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.foto-studio:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.foto-studio img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.foto-studio:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   HORÁRIOS DE ATENDIMENTO
+========================= */
+
+.horarios {
+    background-color: var(--fundo-verde);
+}
+
+
+.lista-horarios {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+}
+
+
+.horario {
+    background-color: var(--branco);
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.horario p {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+}
+
+
+.horario strong {
+    color: var(--verde-principal);
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    background-color: var(--branco);
+}
+
+
+/* =========================
+   CAIXA DE AGENDAMENTO
+========================= */
+
+.agendamento-container {
+    width: min(620px, 100%);
+
+    margin: 35px auto 0;
+
+    padding: 30px;
+
+    background-color: var(--fundo-verde);
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   TIPO DE CONTATO
+========================= */
+
+.tipo-contato {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+.opcao-contato {
+    padding: 14px 15px;
+
+    border: 2px solid var(--verde-principal);
+
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    color: var(--verde-escuro);
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.opcao-contato:hover {
+    background-color: #dcefe8;
+}
+
+
+.opcao-contato.ativo {
+    background-color: var(--verde-principal);
+
+    color: var(--branco);
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form-agendamento {
+    text-align: left;
+}
+
+
+.escondido {
+    display: none;
+}
+
+
+.campo {
+    margin-bottom: 25px;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--verde-escuro);
+
+    font-weight: bold;
+}
+
+
+.campo input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #cbd8d4;
+
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    color: var(--texto);
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.campo input:focus {
+    border-color: var(--verde-principal);
+
+    box-shadow: 0 0 0 3px rgba(77, 139, 122, 0.15);
+}
+
+
+/* =========================
+   HORÁRIOS DO AGENDAMENTO
+========================= */
+
+.horarios-agendamento {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.horarios-agendamento button {
+    padding: 12px 8px;
+
+    border: 1px solid #bdd1ca;
+
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    color: var(--verde-escuro);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.horarios-agendamento button:hover:not(:disabled) {
+    border-color: var(--verde-principal);
+
+    background-color: #e0f1eb;
+}
+
+
+.horarios-agendamento button.selecionado {
+    background-color: var(--verde-principal);
+
+    border-color: var(--verde-principal);
+
+    color: var(--branco);
+}
+
+
+/* HORÁRIO BLOQUEADO */
+
+.horarios-agendamento button:disabled {
+    background-color: #eeeeee;
+
+    color: #999999;
+
+    border-color: #dddddd;
+
+    cursor: not-allowed;
+
+    text-decoration: line-through;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   INFORMAÇÃO DA CONFIRMAÇÃO
+========================= */
+
+.informacao-agendamento {
+    margin-top: 10px;
+
+    padding: 15px;
+
+    background-color: var(--branco);
+
+    border-left: 4px solid var(--verde-principal);
+
+    border-radius: 8px;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.informacao-agendamento strong {
+    color: var(--verde-escuro);
+}
+
+
+.informacao-agendamento p {
+    margin-top: 4px;
+}
+
+
+/* =========================
+   AVISOS
+========================= */
+
+.aviso-agendamento {
+    min-height: 24px;
+
+    margin: 15px 0 5px;
+
+    color: var(--verde-escuro);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+.aviso-agendamento strong {
+    color: var(--verde-escuro);
+}
+
+
+/* =========================
+   BOTÃO WHATSAPP
+========================= */
+
+.botao-whatsapp {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #25d366;
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.botao-whatsapp:hover {
+    background-color: #1fa855;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   WHATSAPP BLOQUEADO
+========================= */
+
+.botao-whatsapp:disabled {
+    background-color: #b8c3bf;
+
+    color: #ffffff;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    opacity: 0.8;
+}
+
+
+.botao-whatsapp:disabled:hover {
+    background-color: #b8c3bf;
+
+    transform: none;
+}
+
+
+/* =========================
+   ENDEREÇO
+========================= */
+
+.endereco {
+    margin-top: 50px;
+}
+
+
+.endereco h3 {
+    color: var(--verde-escuro);
+
+    margin-bottom: 10px;
+}
+
+
+.endereco p {
+    color: #555555;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: var(--verde-escuro);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   ACESSIBILIDADE
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+    }
+
+}
+
+
+/* =========================
+   TABLET / CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 15px;
+    }
+
+
+    .marca {
+        gap: 9px;
+    }
+
+
+    .marca-simbolo {
+        width: 60px;
+
+        height: 38px;
+
+        padding: 6px;
+    }
+
+
+    .marca-nome {
+        font-size: 20px;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* INÍCIO */
+
+    .inicio {
+        padding: 18px 12px 40px;
+    }
+
+
+    .banner-inicio {
+        width: 100%;
+
+        max-width: 430px;
+    }
+
+
+    .imagem-inicio {
+        border-radius: 12px;
+    }
+
+
+    .botao-agendar {
+        margin-top: 20px;
+
+        padding: 13px 25px;
+
+        width: min(100%, 320px);
+
+        text-align: center;
+    }
+
+
+    /* SEÇÕES */
+
+    .secao {
+        padding: 48px 18px;
+    }
+
+
+    .secao h2 {
+        font-size: 27px;
+    }
+
+
+    /* SERVIÇOS */
+
+    .servicos {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 18px;
+    }
+
+
+    .servico {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* GALERIA */
+
+    .galeria-fotos {
+        grid-template-columns: 1fr;
+
+        width: 100%;
+
+        max-width: 430px;
+
+        gap: 18px;
+
+        margin-top: 28px;
+    }
+
+
+    .foto-studio {
+        height: 260px;
+
+        border-radius: 12px;
+    }
+
+
+    /* HORÁRIOS */
+
+    .lista-horarios {
+        width: 100%;
+    }
+
+
+    /* AGENDAMENTO */
+
+    .agendamento-container {
+        padding: 22px 16px;
+    }
+
+
+    .tipo-contato {
+        grid-template-columns: 1fr;
+    }
+
+
+    .horarios-agendamento {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 380px) {
+
+    .horarios-agendamento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
